@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0,1,2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#015488"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/nova_viagem"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/destino"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/destino"
+        android:inputType="text"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tipo_da_viagem"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tipoViagem"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lazer"
+            android:checked="true"
+            android:text="@string/lazer"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/negocios"
+            android:layout_marginLeft="30dp"
+            android:text="@string/negocios"/>
+    </RadioGroup>
+
+    <TableRow>
+        <TextView
+            android:layout_gravity="center"
+            android:text="@string/data_da_chegada" />
+
+        <TextView
+            android:layout_gravity="center"
+            android:text="@string/data_da_saida" />
+    </TableRow>
+
+    <TableRow>
+        <Button
+            android:id="@+id/dataChegada"
+            android:onClick="selecionarData"
+            android:text="@string/selecione"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"/>
+
+        <Button
+            android:id="@+id/dataSaida"
+            android:onClick="selecionarData"
+            android:text="@string/selecione"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"/>
+    </TableRow>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/orcamento"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/orcamento"
+        android:inputType="numberDecimal"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"/>
+
+    <TableRow>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="@string/quantidade_de_pessoas"
+            android:layout_marginLeft="15dp"/>
+
+        <EditText
+            android:id="@+id/quantidadePessoas"
+            android:inputType="number"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"/>
+    </TableRow>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="criarViagem"
+        android:text="@string/criar_nova_viagem"
+        android:layout_marginRight="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="45dp"/>
+
+</TableLayout>
+
+    </ScrollView>
